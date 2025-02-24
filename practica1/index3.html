@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diseño Completo con CSS Grid</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            height: 100vh;
+            display: grid;
+            grid-template-rows: 10% 1fr 1fr 10%;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            background-color: #f8f8f8;
+            padding: 10px;
+        }
+        .header {
+            grid-column: span 2;
+            background-color: #5DADE2;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: white;
+        }
+        .main-content {
+            background-color: #58D68D;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: white;
+        }
+        .sidebar {
+            background-color: #AF7AC5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: white;
+        }
+        .twin {
+            background-color: #E67E22;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: white;
+        }
+        .footer {
+            grid-column: span 2;
+            background-color: #154360;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">.header</div>
+    <div class="main-content">.main-content</div>
+    <div class="sidebar">.sidebar</div>
+    <div class="twin">.twin</div>
+    <div class="twin">.twin</div>
+    <div class="footer">.footer</div>
+</body>
+</html>

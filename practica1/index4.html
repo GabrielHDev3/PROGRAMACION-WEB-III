@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diseño CSS Grid</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #ccc;
+        }
+
+        .container {
+            width: 90%;
+            height: 80%;
+            display: grid;
+            grid-template-columns: 2fr 3fr;
+            grid-template-rows: 2fr 1fr 1fr;
+            gap: 10px;
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2rem;
+            font-weight: bold;
+            color: white;
+            border-radius: 5px;
+        }
+
+        .box1 { background: #ff6b6b; grid-row: span 2; }
+        .box2 { background: #caff70; }
+        .box3 { background: #ffb6ff; }
+        .box4a { background: #9aa9ff; }
+        .box4b { background: #9aa9ff; }
+        
+        .right-section {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            gap: 10px;
+        }
+
+        .right-side {
+            display: grid;
+            grid-template-rows: 1fr 1fr;
+            gap: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box box1">1</div>
+        <div class="right-section">
+            <div class="box box2">2</div>
+            <div class="right-side">
+                <div class="box box4a">4a</div>
+                <div class="box box4b">4b</div>
+            </div>
+            <div class="box box3">3</div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diseño Semántico a Pantalla Completa</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            display: flex;
+            flex-direction: column;
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f8;
+            height: 100vh;
+        }
+        header {
+            width: 100%;
+            height: 10vh;
+            background-color: #a3e4f8;
+            text-align: center;
+            line-height: 10vh;
+            font-weight: bold;
+        }
+        nav {
+            width: 100%;
+            height: 5vh;
+            background-color: #d1b6c8;
+            text-align: center;
+            line-height: 5vh;
+        }
+        .container {
+            display: flex;
+            flex: 1;
+            justify-content: space-between;
+            padding: 20px;
+        }
+        section {
+            width: 65%;
+            background-color: #f8e0b5;
+            padding: 20px;
+        }
+        aside {
+            width: 30%;
+            background-color: #eac693;
+            padding: 20px;
+            text-align: center;
+        }
+        footer {
+            width: 100%;
+            height: 10vh;
+            background-color: #c8d6b6;
+            text-align: center;
+            line-height: 10vh;
+        }
+    </style>
+</head>
+<body>
+    <header><h1>Header</h1></header>
+    <nav>Nav</nav>
+    <div class="container">
+        <section>
+            <h2>Section</h2>
+            <article>
+                <h3>Article 1</h3>
+            </article>
+            <article>
+                <h3>Article 2</h3>
+            </article>
+        </section>
+        <aside>Aside</aside>
+    </div>
+    <footer>Footer</footer>
+</body>
+</html>

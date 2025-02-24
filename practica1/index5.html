@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diseño CSS Grid</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #eee;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1000px;
+            min-height: 100vh;
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            grid-template-rows: auto auto auto auto auto;
+            gap: 10px;
+            padding: 20px;
+        }
+
+        .box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: white;
+            border-radius: 5px;
+            padding: 20px;
+        }
+
+        .header {
+            background: #48c6ef;
+            grid-column: span 2;
+        }
+
+        .hero {
+            background: #d4c1e1;
+        }
+
+        .main-content {
+            background: #f4b400;
+        }
+
+        .sidebar {
+            background: #85a85f;
+            grid-row: span 2;
+        }
+
+        .extra-content {
+            background: #7c7c7c;
+            grid-column: span 2;
+        }
+
+        .related-images {
+            background: #2ca86f;
+        }
+
+        .related-posts {
+            background: #f5c1d1;
+        }
+
+        .footer {
+            background: #f4a400;
+            grid-column: span 2;
+        }
+
+        .bottom-section {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 10px;
+            grid-column: span 2;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box header">Header</div>
+        <div class="box hero">Hero</div>
+        <div class="box main-content">Main Content</div>
+        <div class="box sidebar">Sidebar</div>
+        <div class="box extra-content">Extra Content</div>
+        <div class="bottom-section">
+            <div class="box related-images">Related Images</div>
+            <div class="box related-posts">Related Posts</div>
+        </div>
+        <div class="box footer">Footer</div>
+    </div>
+</body>
+</html>

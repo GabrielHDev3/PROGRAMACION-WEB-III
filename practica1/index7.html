@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo de Layout</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            display: grid;
+            grid-template-rows: 150px 1fr 100px;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-areas: 
+                "hero hero hero"
+                "col1 col2 col3"
+                "footer footer footer";
+            height: 100vh;
+        }
+        .hero {
+            grid-area: hero;
+            background: #ff79c6;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            color: white;
+        }
+        .col1, .col2, .col3 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+            color: white;
+        }
+        .col1 {
+            grid-area: col1;
+            background: #8be9fd;
+        }
+        .col2 {
+            grid-area: col2;
+            background: #bd93f9;
+        }
+        .col3 {
+            grid-area: col3;
+            background: #ffb86c;
+        }
+        footer {
+            grid-area: footer;
+            background: #6272a4;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="hero">Hero Section</div>
+    <div class="col1">Columna 1</div>
+    <div class="col2">Columna 2</div>
+    <div class="col3">Columna 3</div>
+    <footer>Footer</footer>
+</body>
+</html>
